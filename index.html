@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pierre Baud, AI portfolio</title>
+  <meta name="description" content="Pierre Baud, AI engineer and researcher in training at Epitech Lyon, AI Lead at PoC Innovation. World models for robotics, LLM agents, generative 3D, reinforcement learning.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050E1C">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pierre Baud, AI portfolio">
+  <meta property="og:description" content="World models for robotics, LLM agents, generative 3D, reinforcement learning. Epitech Lyon and PoC Innovation.">
+  <meta property="og:image" content="assets/img/photo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <script src="js/data.js?v=3" defer></script>
+  <script src="js/main.js?v=3" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects" data-i18n="skip">Skip to content</a>
+
+  <div class="ambient" aria-hidden="true">
+    <i class="halo halo-1"></i>
+    <i class="halo halo-2"></i>
+    <i class="halo halo-3"></i>
+    <i class="grain"></i>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Main">
+    <div class="nav-inner">
+      <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>Pierre Baud</a>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-ind" id="nav-ind" aria-hidden="true"></li>
+        <li><a href="#research" data-section="research" data-i18n="nav.research">About</a></li>
+        <li><a href="#projects" data-section="projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#experience" data-section="experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#skills" data-section="skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#contact" data-section="contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <button class="nav-btn" id="lang-toggle" type="button" aria-label="Passer le site en français">
+        <span class="lang-opt" data-l="en">EN</span><span class="lang-sep" aria-hidden="true">/</span><span class="lang-opt" data-l="fr">FR</span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <canvas id="latent" aria-hidden="true"></canvas>
+    <i class="hero-shade hero-shade-l" aria-hidden="true"></i>
+    <i class="hero-shade hero-shade-b" aria-hidden="true"></i>
+    <div class="wrap hero-wrap">
+      <div class="hero-inner">
+        <p class="hero-kicker"><span class="mono">~/</span><span data-i18n="hero.kicker">AI engineer & researcher in training</span></p>
+        <h1 class="name">
+          <span class="name-line"><span class="name-text">Pierre</span></span>
+          <span class="name-line"><span class="name-text">Baud</span></span>
+        </h1>
+        <div class="hero-copy">
+          <p class="hero-role"><span class="role">Epitech Lyon</span><span class="school" data-i18n="hero.school">AI Lead at PoC Innovation</span></p>
+          <p class="hero-pitch" data-i18n="hero.pitch">I build models that learn how the world moves and agents that act within it: latent world models for a robot arm, LLM agents that check their own code and budget, and generative pipelines that turn text into animated 3D. I care about results that survive several seeds.</p>
+        </div>
+        <div class="hero-cta">
+          <p class="hero-status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.status">Open to AI research internships and collaborations</span></p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects" data-i18n="hero.cta1">See the projects</a>
+            <a class="btn btn-glass" href="https://github.com/divisio74" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-glass" href="#contact" data-i18n="hero.cta2">Contact me</a>
+          </div>
+        </div>
+      </div>
+      <p class="hero-hint mono" aria-hidden="true"><span data-i18n="hero.hint">latent space · click to add a point</span></p>
+    </div>
+  </header>
+
+  <div class="marquee" role="group" aria-label="Technologies">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+
+  <main>
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <div class="about">
+          <div class="about-text">
+            <p class="eyebrow mono" data-i18n="research.eyebrow">about</p>
+            <h2 class="section-title" id="research-title"><span class="ln"><span class="ln-in" data-i18n="research.title">Learn fast, then innovate.</span></span></h2>
+            <p class="section-lead" data-i18n="research.lead">Five years of business school, then a deliberate switch to computer science at Epitech. That double background shapes how I work: start from a question worth answering, measure before claiming, and document the hypotheses that turned out wrong.</p>
+            <ul class="facts" id="facts"></ul>
+          </div>
+          <figure class="portrait">
+            <img src="assets/img/photo.jpg" alt="Pierre Baud" width="480" height="604" loading="lazy">
+            <figcaption class="mono">Lyon · Epitech 2029 · PoC Innovation</figcaption>
+          </figure>
+        </div>
+        <div class="poc card reveal">
+          <div class="poc-main">
+            <p class="eyebrow mono" data-i18n="poc.eyebrow">PoC Innovation · AI Lead</p>
+            <h3 class="poc-title" data-i18n="poc.title">Leading research teams, not just projects.</h3>
+            <p class="poc-lead" data-i18n="poc.lead"></p>
+            <p class="poc-label mono" data-i18n="poc.teams">Projects from the pole on this site</p>
+            <ul class="poc-teams" id="poc-teams"></ul>
+          </div>
+          <div class="poc-side">
+            <p class="poc-label mono" data-i18n="poc.org">Event I co-organised</p>
+            <div class="poc-event" id="poc-event"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="kband" aria-hidden="true"><div class="kband-track"><div class="kband-inner" data-kword="projects"></div></div></div>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 class="section-title" id="projects-title"><span class="ln"><span class="ln-in" data-i18n="projects.title">Projects</span></span></h2>
+          <ul class="stats" id="stats"></ul>
+        </div>
+        <p class="section-lead" data-i18n="projects.lead">Every project here is documented, reproducible and evaluated. Open a card for the method, the numbers and the code.</p>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects"><i class="filter-ind" id="filter-ind" aria-hidden="true"></i></div>
+        <p class="sr-only" id="filters-live" aria-live="polite"></p>
+        <div class="grid" id="project-grid"></div>
+
+        <div class="foundations">
+          <h3 class="sub-title" data-i18n="projects.found">Mathematical foundations</h3>
+          <p class="section-lead" data-i18n="projects.foundLead">Earlier Epitech projects where the maths behind ML was written by hand.</p>
+          <ul class="found-list" id="found-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="kband" aria-hidden="true"><div class="kband-track"><div class="kband-inner" data-kword="experience"></div></div></div>
+
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <h2 class="section-title" id="experience-title"><span class="ln"><span class="ln-in" data-i18n="experience.title">Experience</span></span></h2>
+        <div class="timeline-wrap">
+          <i class="tl-rail" aria-hidden="true"><i class="tl-line" id="tl-line"></i></i>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+        <h3 class="sub-title" data-i18n="experience.hack">Hackathons</h3>
+        <div class="hacks" id="hacks"></div>
+      </div>
+    </section>
+
+    <div class="kband" aria-hidden="true"><div class="kband-track"><div class="kband-inner" data-kword="skills"></div></div></div>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 class="section-title" id="skills-title"><span class="ln"><span class="ln-in" data-i18n="skills.title">Skills</span></span></h2>
+        <p class="section-lead" data-i18n="skills.lead">Pick a skill to see the projects where I used it.</p>
+        <div class="skills">
+          <div class="skills-groups" id="skills-groups"></div>
+          <aside class="skills-index" aria-label="Project index">
+            <div class="readout">
+              <p class="readout-name" id="ro-name"></p>
+              <p class="readout-count"><span id="ro-num"></span> <span id="ro-unit"></span></p>
+            </div>
+            <ul class="proj-index" id="proj-index"></ul>
+          </aside>
+        </div>
+        <p class="langs" data-i18n="skills.langs">Languages: French (native), English C1 (Duolingo English Test 115).</p>
+      </div>
+    </section>
+
+    <div class="kband" aria-hidden="true"><div class="kband-track"><div class="kband-inner" data-kword="contact"></div></div></div>
+
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-wrap">
+        <i class="contact-halo" aria-hidden="true"></i>
+        <h2 class="contact-title" id="contact-title"><span class="ln"><span class="ln-in" data-i18n="contact.t1">Let's build</span></span> <span class="ln"><span class="ln-in" data-i18n="contact.t2">something that learns.</span></span></h2>
+        <p class="contact-status" data-i18n="contact.lead">A research topic, an internship, a collaboration? Based in Lyon, open to remote work and to moving.</p>
+        <ul class="contact-list" id="contact-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>Pierre Baud, 2026</p>
+      <p class="mono" data-i18n="footer">designed and coded in Lyon</p>
+    </div>
+  </footer>
+
+  <dialog class="panel" id="project-panel" aria-labelledby="pp-title">
+    <div class="panel-body">
+      <div class="panel-bar">
+        <p class="chip" id="pp-domain"></p>
+        <button class="btn btn-glass btn-small" id="pp-close" type="button" data-i18n="panel.close">Close</button>
+      </div>
+      <div class="panel-visual pv" id="pp-visual"></div>
+      <div class="panel-content">
+        <h2 class="panel-title" id="pp-title"></h2>
+        <p class="panel-tagline" id="pp-tagline"></p>
+        <p class="panel-context" id="pp-context"></p>
+        <p class="panel-summary" id="pp-summary"></p>
+        <div class="metrics" id="pp-metrics"></div>
+        <div id="pp-flow-wrap">
+          <h3 class="panel-sub" data-i18n="panel.flow">How it works</h3>
+          <ol class="flow" id="pp-flow"></ol>
+        </div>
+        <h3 class="panel-sub" data-i18n="panel.points">What I did and found</h3>
+        <ul class="panel-points" id="pp-points"></ul>
+        <div class="panel-figs" id="pp-figs"></div>
+        <h3 class="panel-sub">Stack</h3>
+        <ul class="tags" id="pp-stack"></ul>
+        <div class="panel-links" id="pp-links"></div>
+        <div class="panel-nav">
+          <button class="btn btn-glass btn-small" id="pp-prev" type="button" data-i18n="panel.prev">Previous</button>
+          <p class="panel-count" id="pp-count"></p>
+          <button class="btn btn-glass btn-small" id="pp-next" type="button" data-i18n="panel.next">Next</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
